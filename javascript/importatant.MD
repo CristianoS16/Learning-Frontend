@@ -11,3 +11,9 @@
     var name = "abc"
     var name = "def"
     ```
+
+## *null* X *undefined*
+
+    null !== undefined
+
+`null` It is a decision for the programmer to make the variable does not pursue anywhere in the memory.

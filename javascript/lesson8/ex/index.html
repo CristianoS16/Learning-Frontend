@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices Lesson 8</title>
+</head>
+
+<body>
+    <script>
+        const user_name = prompt("What is your name:")
+        document.body.innerHTML += `Seu nome é: ${user_name}<br />`;
+        document.body.innerHTML += `Seu nome tem ${user_name.length} letras <br />`;
+        document.body.innerHTML += `A segunda letra do seu nome é: ${user_name[1]}<br />`;
+        document.body.innerHTML += `Qual o primeiro índice da letra a no seu nome? ${user_name.indexOf('a')}<br />`;
+        document.body.innerHTML += `Qual o último índice da letra LETRA no seu nome? ${user_name.lastIndexOf('a')}<br />`;
+        document.body.innerHTML += `As últimas 3 letras do seu nome são: ${user_name.slice(-3)}<br />`;
+        document.body.innerHTML += `As palavras do seu nome são: ${user_name.split(' ')}<br />`;
+        document.body.innerHTML += `Seu nome com letras maiúsculas: ${user_name.toUpperCase()}<br />`;
+        document.body.innerHTML += `Seu nome com letras minúsculas: ${user_name.toLowerCase()}<br />`;
+    </script>
+</body>
+
+</html>

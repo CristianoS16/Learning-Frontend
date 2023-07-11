@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <section class="container">
+    <h1>BMI Table</h1>
+    <div class="bmi-table">
+      <ul>
+        <li>
+          <strong>BMI Value</strong>
+        </li>
+        <li>
+          Less than 18.5
+        </li>
+        <li>
+          Between 18.5 and 24.9
+        </li>
+        <li>
+          Between 25 and 29.9
+        </li>
+        <li>
+          Between 30 and 34.9
+        </li>
+        <li>
+          Between 35 and 39.9
+        </li>
+        <li>
+          More than 40
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <strong>BMI Label</strong>
+        </li>
+        <li>
+          Under weight
+        </li>
+        <li>
+          Normal weight
+        </li>
+        <li>
+          Overweight
+        </li>
+        <li>
+          Grade 1 obesity
+        </li>
+        <li>
+          Grade 2 obesity
+        </li>
+        <li>
+          Grade 3 obesity
+        </li>
+      </ul>
+    </div>
+    <h1>Calculate your BMI</h1>
+    <form class="form" action="" method="get">
+      <label for="weight">Weight: <input type="text" class="weight" id="weight"></label>
+      <label for="height">Height: <input type="text" class="height" id="height"></label>
+      <button type="submit">Calculate</button>
+    </form>
+    <div class="results"></div>
+  </section>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

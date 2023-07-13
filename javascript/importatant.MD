@@ -11,6 +11,8 @@
     var name = "abc"
     var name = "def"
     ```
+* `let` has block scope and `var` has function scope
+* There is hoisting for `var` declarations
 
 ## *null* X *undefined*
 

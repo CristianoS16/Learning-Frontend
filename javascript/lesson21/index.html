@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modelo</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <section class="container">
+    <h1>Login Form</h1>
+    <ul>
+      <li>No field can be empty</li>
+      <li>User can only contain letters and/or numbers</li>
+      <li>User must be between 3 and 12 characters</li>
+      <li>Password must be between 6 and 12 characters</li>
+    </ul>
+
+    <form action="/" method="POST" class="form">
+      <label>First Name</label>
+      <input type="text" class="first-name validate">
+      <label>Last Name</label>
+      <input type="text" class="last-name validate">
+      <label>CPF</label>
+      <input type="text" class="cpf validate">
+      <label>User Name</label>
+      <input type="text" class="user-name validate">
+      <label>Password</label>
+      <input type="password" class="password validate">
+      <label>Check Password</label>
+      <input type="password" class="check-password validate">
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script src="./assets/js/cpfValidator.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

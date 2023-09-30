@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { NavBar } from './styled';
 
 export default function Header() {
-  const clickButton = useSelector((state) => state.clickButton);
+  const clickButton = useSelector((state) => state.example.clickButton);
 
   return (
     <NavBar>

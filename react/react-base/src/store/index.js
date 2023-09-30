@@ -1,10 +1,10 @@
 import { createStore } from 'redux';
 
-// const initialState = {
-//   clickButton: false,
-// };
+const initialState = {
+  clickButton: false,
+};
 
-const reducer = (state, action) => {
+const reducer = (state=initialState, action) => {
   switch (action.type) {
     case 'CLICK_BUTTON': {
       const newState = { ...state };

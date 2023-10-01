@@ -4,20 +4,19 @@ import * as actions from './actions';
 import * as types from '../types';
 
 const request = () =>
-  // eslint-disable-next-line no-unused-vars
-  new Promise((resolve, reject) => {
+  new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, 2000);
+    }, 600);
   });
 
 function* exampleRequest() {
   try {
     yield call(request);
-    yield put(actions.clickButtonSuccess);
+    yield put(actions.clickButtonSuccess());
   } catch {
     toast.error('Error to make request.');
-    yield put(actions.clickButtonFailure);
+    yield put(actions.clickButtonFailure());
   }
 }
 

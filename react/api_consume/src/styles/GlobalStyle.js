@@ -32,7 +32,7 @@ export default createGlobalStyle`
 
   a{
     text-decoration: none;
-    background-color: ${colors.primaryColor};
+    color: ${colors.primaryColor};
   }
 
   ul{

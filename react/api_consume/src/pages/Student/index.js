@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { get } from 'lodash';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { isEmail, isInt, isFloat } from 'validator';
 import { useDispatch } from 'react-redux';
+import { FaEdit, FaUserCircle } from 'react-icons/fa';
 import { Container } from '../../styles/GlobalStyle';
-import { Form } from './styled';
+import { Form, ProfilePicture, Title } from './styled';
 import Loading from '../../components/Loading';
 import axios from '../../services/axios';
 import history from '../../services/history';
 import * as actions from '../../store/modules/auth/actions';
 
 export default function Student({ match }) {
-  console.log(`match: ${match}`);
   const id = get(match, 'params.id', '');
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -21,6 +22,7 @@ export default function Student({ match }) {
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [photo, setPhoto] = useState('');
 
   const dispatch = useDispatch();
 
@@ -30,7 +32,7 @@ export default function Student({ match }) {
       try {
         setIsLoading(true);
         const { data } = await axios.get(`/alunos/${id}`);
-        const photo = get(data, 'Foto[0].url');
+        setPhoto(get(data, 'Foto[0].url'));
 
         setName(data.nome);
         setLastName(data.sobrenome);
@@ -146,7 +148,17 @@ export default function Student({ match }) {
   return (
     <Container>
       <Loading isLoading={isLoading} />
-      <h1>{id ? 'Edit Student' : 'Create Student'}</h1>
+      <Title>{id ? 'Edit Student' : 'Create Student'}</Title>
+
+      {id && (
+        <ProfilePicture>
+          {photo ? <img src={photo} alt={name} /> : <FaUserCircle size={180} />}
+          <Link to={`/photos/${id}`}>
+            <FaEdit size={24} />
+          </Link>
+        </ProfilePicture>
+      )}
+
       <Form onSubmit={handleSubmit}>
         {fieldFactory('Name', name, setName)}
         {fieldFactory('Last name', lastName, setLastName)}

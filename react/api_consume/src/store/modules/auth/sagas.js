@@ -1,6 +1,6 @@
 import { call, put, all, takeLatest } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
-import get from 'lodash';
+import { get } from 'lodash';
 import * as actions from './actions';
 import * as types from '../types';
 import axios from '../../../services/axios';

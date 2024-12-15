@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  background-color: #111;
+  border-radius: 4px;
+  margin: 20px;
+  padding: 30px;
+}
+
+span {
+  color: #febe01;
+}
+
+h2 {
+  color: white;
+  margin: 0px;
+}
+
+p {
+  color: #b2b2b2;
+}
+
+button {
+  border-radius: 6px;
+  background-color: #febe01;
+  color: #332200;
+  padding: 10px;
+  font-size: large;
+}
